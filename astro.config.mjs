@@ -8,4 +8,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: 'https://rojo-rajoelisolo.github.io',
+  base: "./",
 });
