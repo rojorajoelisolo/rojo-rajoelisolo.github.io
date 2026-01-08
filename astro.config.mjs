@@ -7,6 +7,4 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: 'https://rojo-rajoelisolo.github.io',
-  base: "./",
 });
