@@ -1,3 +1,21 @@
+function getMyAge(): number {
+  const birthDate = new Date(1996, 1, 28);
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+
+  const hasHadBirthdayThisYear =
+    today.getMonth() > birthDate.getMonth() ||
+    (today.getMonth() === birthDate.getMonth() &&
+      today.getDate() >= birthDate.getDate());
+
+  if (!hasHadBirthdayThisYear) {
+    age--;
+  }
+
+  return age;
+}
+const age = getMyAge();
+
 export const siteConfig = {
   name: "Rojoniaina Rajoelisolo",
   title: "Développeur .NET C# | Magento 2",
@@ -7,19 +25,18 @@ export const siteConfig = {
   social: {
     email: "rojoniaina-rajoelisolo@gmail.com",
     linkedin: "https://www.linkedin.com/in/rojoniaina-rajoelisolo-23193918a/",
-    facebook: "https://web.facebook.com/rajoelisolo.rojoniaina",
     telephone: "+261 34 99 025 51",
+    whatsapp: "+261349902551",
   },
 
   aboutMe:
-    `Rojo, je suis Malgache, âgé de 30 ans et résident à Antananarivo, Madagascar. 
-    Passionné par le beatmaking, notamment le graphisme et le scoutisme.
+    `<strong>Rojo</strong>, je suis Malgache, âgé de ${age} ans et résident à <strong>Antananarivo, Madagascar</strong>.
     Je maîtrise le malgache et le français, avec un niveau intermédiaire en anglais. 
     Professionnellement, développeur fullstack à l'origine, j’ai progressivement orienté ma spécialisation vers les technologies 
-    .NET C# ainsi que le Back-end du Magento 2, dans lequel je m’investis pleinement aujourd’hui. 
-    Fort de plus de 8 ans d’expérience dans le développement logiciel, 
-    j’ai acquis plus de 7 ans d’expertise approfondie aussi bien sur l’écosystème .NET et 6 ans sur la plateforme Magento, 
-    en restant constamment à jour sur leurs évolutions techniques et bonnes pratiques,
+    <strong>.NET C#</strong> ainsi que le Back-end du <strong>Magento 2</strong>, dans lequel je m’investis pleinement aujourd’hui. 
+    Fort de plus de <strong>8 ans d’expérience</strong> dans le développement logiciel, 
+    j’ai acquis plus de 7 ans d’expertise approfondie aussi bien sur l’écosystème .NET et 6 ans sur 
+    la plateforme Magento, en restant constamment à jour sur leurs évolutions techniques et bonnes pratiques,
     intervenant sur des projets à destination de clients internationaux, notamment européens.`,
 
   skills: [".NET Core", "C#", "ASP.NET MVC", "Magento 2", "PHP", "CodeIgniter", "Java", "Spring Boot", "MEAN", 
@@ -29,16 +46,18 @@ export const siteConfig = {
   education: [
     {
       school: "Université de Nice Sophia Antipolis",
+      link: "https://univ-cotedazur.fr/",
       degree: "Master - MBDS",
-      dateRange: "2019 - 2020",
+      dateRange: "2019 – 2020",
       achievements: [
         "France",
       ],
     },
     {
       school: "ITUniversity",
+      link: "https://www.ituniversity-mg.com/page/",
       degree: "Licence – Développement d’application",
-      dateRange: "2014 - 2017",
+      dateRange: "2014 – 2017",
       achievements: [
         "Madagascar",
       ],
@@ -53,39 +72,8 @@ export const siteConfig = {
     },
   ],
   
-  aboutProject: `Certains projets que j'ai participé ne peuvent être présentés publiquement pour des raisons de confidentialité.
-  Néanmoins, les réalisations présentées ci-après constituent toutefois un aperçu de mes compétences et de mon expérience que j’ai eu l’occasion de traiter.`,
-  
-  projects: [
-    {
-      name: "E.Leclerc",
-      poste: "Développeur",
-      description:
-        "Développement des features de LEN et Responsable de la qualité des catalogues de produits, sous .NET (latest version)",
-      link: "https://www.e.leclerc/",
-    },
-    {
-      name: "Milka Rebranding",
-      poste: "Lead Développeur Back-end",
-      description:
-        "Développement de la partie Back-end .NET et Magento 2",
-      link: "https://www.milka.com/de/",
-    },
-    {
-      name: "Hager",
-      poste: "Développeur",
-      description:
-        "Développement de la partie Back-end Magento 2",
-      link: "https://hager.com/fr",
-    },
-    {
-      name: "Two-too",
-      poste: "Lead Développeur",
-      description:
-        "Développement de toutes les fonctionnalités Magento 2",
-      link: "https://www.two-too.com/",
-    },
-  ],
+  aboutProject: `Certains projets auxquels j'ai participé ne peuvent être présentés publiquement pour des raisons de confidentialité.
+    Néanmoins, les réalisations présentées ci-après constituent toutefois un aperçu de mes compétences et de mon expérience que j’ai eu l’occasion de traiter.`,
 
   experience: [
     {
@@ -95,9 +83,9 @@ export const siteConfig = {
       bullets: [
         "Développement de features et de fixes des jobs webservices RESTful .NET au suivi du Lead Dev et Product Manager",
         "Maintenance, vérification et automatisation des jobs planifiés",
-        "Responsable de la qualité des catalogues de produits",
+        "Responsable qualité des catalogues de produits de son ecosystème",
       ],
-      projects: ["E.Leclerc", "LEN", "SEM", "Alice"],
+      projects: ["E.Leclerc", "LEN", "Alice"],
       skills: [".NET Core", "Razor", "Entity Framework", "LINQ", "RESTful API", "Hangfire", "Redis", 
         "PostgreSQL", "Docker", "Visual Studio", "Git Fork", "VSCode", "Jira", "Gitlab"],
     },
@@ -178,4 +166,40 @@ export const siteConfig = {
       skills: ["PHP", "CodeIgniter", "Ajax", "Javascript", "Bootstrap", "MySQL", "VSCode", "UwAmp", "Power AMC"],
     },
   ],
+
+  qualities: ["Créatif", "Persévérant", "Autonome", "Sens du détail", "Méthodique", "Esprit d'équipe", "Responsable"],
+
+  hobbies: ["Beatmaking", "Design graphique", "Scoutisme", "Manga", "Jeux de stratégie", "Jeux vidéo", "Découverte culturelle"],
+
+  projects: [
+    {
+      name: "E.Leclerc",
+      poste: "Développeur",
+      description:
+        "Développement des features de LEN et Responsable de la qualité des catalogues de produits, sous .NET",
+      link: "https://www.e.leclerc/",
+    },
+    {
+      name: "Milka Rebranding",
+      poste: "Lead Développeur Back-end",
+      description:
+        "Développement de la partie Back-end .NET et Magento 2",
+      link: "https://www.milka.com/de/",
+    },
+    {
+      name: "Hager",
+      poste: "Développeur",
+      description:
+        "Développement de la partie Back-end Magento 2",
+      link: "https://hager.com/fr",
+    },
+    {
+      name: "Two-too",
+      poste: "Lead Développeur",
+      description:
+        "Développement de toutes les fonctionnalités Magento 2",
+      link: "https://www.two-too.com/",
+    },
+  ],
+
 };

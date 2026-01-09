@@ -126,15 +126,17 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           <a
             href="#about"
             class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
-            >About</a
+            style={{ color: siteConfig.accentColor }}
+            >À propos</a
           >
           {
-            hasProjects && (
+            hasEducation && (
               <a
-                href="#projects"
+                href="#education"
                 class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+                style={{ color: siteConfig.accentColor }}
               >
-                Projects
+                Études
               </a>
             )
           }
@@ -143,25 +145,34 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
               <a
                 href="#experience"
                 class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+                style={{ color: siteConfig.accentColor }}
               >
-                Experience
+                Expériences
               </a>
             )
           }
           {
-            hasEducation && (
+            hasProjects && (
               <a
-                href="#education"
+                href="#projects"
                 class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+                style={{ color: siteConfig.accentColor }}
               >
-                Education
+                Projets
               </a>
             )
           }
+          <a
+            href="#personals"
+            class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+            style={{ color: siteConfig.accentColor }}
+            >Personels</a
+          >
         </nav>
+        <br>
         <p class="text-sm text-gray-500">
           © {new Date().getFullYear()}
-          {siteConfig.name}. All rights reserved.
+          {siteConfig.name}. Tous droits réservés.
         </p>
       </div>
     </div>
